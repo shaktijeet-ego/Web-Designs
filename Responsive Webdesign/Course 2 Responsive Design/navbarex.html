@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Bootstrap NavBar
+        </title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+
+   <body>
+       <nav class="navbar navbar-default">
+        <div class="container-fluid">
+           <div class="navbar-header">
+               <!--Start Collapsed NAVBAR-->
+               <button type="button" 
+               class="navbar-toggle collapsed" 
+               data-toggle="collapse"
+               data-target="#main_navBar" 
+               aria-expanded="false">Open</button>
+           </div>
+           <!--End Collapsed NAVBAR-->
+
+            <!--Start unCollapsed NAVBAR-->
+           <div class="collapse navbar-collapse" id="main_navBar">
+               <ul class="nav navbar-nav">
+                   <li class="active"><a href="#">Home</a></li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact</a></li>
+                   <li><a href="#">Some Extra</a></li>
+               </ul>
+            </div>
+             <!--End Collapsed NAVBAR-->
+           </div>
+       </nav>
+   </body>
+</html>

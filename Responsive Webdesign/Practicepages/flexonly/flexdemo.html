@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            border: 1px solid black;
+            display: flex;
+            height: 100px;
+            flex-direction: row;
+            /*flex-direction: row-reverse;*/
+            flex-wrap: nowrap; /*does not wrap the content to another line*/
+            flex-wrap: wrap; /*wraps the content to another line*/
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            align-items: baseline;
+            align-items: stretch;
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: stetch;
+            align-content: space-between;
+            align-content:space-around;}
+           
+            .box1,.box2,.box3,.box4{
+                border: 1px solid red;
+            }
+        
+        .box1{
+            flex-grow: 1;
+            flex-shrink:1;
+            flex-basis: 100px;
+        }
+
+        .box2{
+            flex-grow: 2;
+            flex-shrink:2;
+            flex-basis: 20px;
+        }
+        .box3{
+            flex-grow: 3;
+            flex-shrink:3;
+            flex-basis: 20px;
+        }
+
+        .box4{
+            flex-grow: 4;
+            flex-shrink:4;
+            flex-basis: 20px;
+        }
+
+        .container2{
+            display: flex;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            flex-direction: column; /*can use this but not required if column reverse is used*/
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            align-items: baseline;
+            align-items: stretch;
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: stetch;
+            align-content: space-between;
+            align-content:space-around;
+        }
+        .box5,.box6,.box7,.box8{
+            
+            border: 1px solid red;
+        }
+
+        .box5{
+            flex-grow: 1;
+            
+        }
+
+        .box6{
+            flex-grow: 2;
+        }
+        .box7{
+            flex-grow: 3;
+        }
+
+        .box8{
+            flex-grow: 4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box1">BOX1</div>
+    <div class="box2">BOX2</div>
+    <div class="box3">BOX3</div>
+    <div class="box4">BOX4</div>
+</div>
+<div class="container2">
+    <div class="box5">BOX5</div>
+    <div class="box6">BOX6</div>
+    <div class="box7">BOX7</div>
+    <div class="box8">BOX8</div>
+</div>
+</body>
+</html>

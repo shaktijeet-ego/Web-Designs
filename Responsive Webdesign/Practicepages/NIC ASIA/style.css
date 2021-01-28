@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+:root{
+    --border-color:#cccccc;
+    --primary-color:#EC1C2F;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px ;
+    padding-top: 50px ;
+    background: url("bg.png");
+    font-family: 'Lato', sans-serif;
+}
+
+#main-container{
+    margin: 0px auto;
+    max-width: 770px;
+    background-color: white;
+}
+
+/*Header-logo*/
+
+.header-logo{
+    background-color:var(--primary-color);
+    display: flex;
+    justify-content: center;padding: 10px;
+}
+
+/*Header-itouch*/
+.header-itouch{
+    text-align: center;
+    padding: 15px;
+}
+
+.card{
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+
+/*section-a*/
+.section-a{
+
+display: flex;
+justify-content: space-between;
+margin-left: 30px;
+}
+
+.section-a .form-control{
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+
+}
+
+.section-a .form-control div{
+    width: 30%;
+    
+}
+
+.section-a .keyboard-section{
+    align-self: flex-start;
+    width: 60%;
+    font-size: 10px;
+}
+.section-a .formsection{
+    width:40%;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.section-a .formsection .form-control input{
+    padding:5px ;
+    border: 1px solid var(--border-color);
+}
+
+.section-a .formsection a{
+    font-size: 11px; 
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    padding-left:15px ;
+    text-decoration: underline;
+}
+
+.btn{
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.login-corporate{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    margin-left:30px ;
+}
+
+.login-corporate img{
+    width: 40%;
+    border: 1px solid var(--border-color);
+    padding: 4px;
+}
+
+.CASBA{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.CASBA img{
+    justify-content: flex-end;
+    width: 62%;
+    border: 1px solid var(--border-color);
+}
+
+/*Notice*/
+.notice{
+    border-right: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.notice h3{
+    padding: 15px;
+    text-align: center;
+}
+
+hr{
+    border-color:var(--border-color);
+}
+
+.security-tips{
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+}
+
+.security-tips a{
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.footer ul{
+    list-style-type: none;
+    display: flex;
+    
+}
+
+.footer li{
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.footer li a{
+    text-decoration: none;
+    
+    color: white;
+}
+
+
+@media(max-width:770px){
+    #main-container{
+        width: 100%;
+        
+    }
+}

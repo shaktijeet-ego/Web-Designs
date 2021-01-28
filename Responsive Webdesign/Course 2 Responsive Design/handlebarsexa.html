@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+            Handlebar Example
+        </title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/handlebars-v3.0.3.js"></script>
+
+    </head>
+
+    <body>
+        <!--Empty div to put content into-->
+        <div id="content">
+
+        </div>
+
+        <!--Template code-->
+        <script id="image-temp" type="text/x-handlebars-template">
+        <div class="title">
+            <h1>{{title}}</h1>
+            <h3 class="author">{{author}}</h3>
+            <img src="{{src}}"/>
+        </div>
+        </script>
+
+        <!--javascript to fill the templates-->
+
+        <script type="text/javascript">
+
+        //grab our template code from DOM
+        var source = $("#image-temp").html();
+
+        //compile the template to use it
+        var template = Handlebars.compile(source);
+
+        //create data
+
+        var descdata = {
+            src:"images/img_1.jpg",
+            title:"This is an image",
+            author:"Shaktijeet"
+        };
+
+        //generate HTML from the data
+        var htmldata = template(descdata);
+
+        //add the HTML to the content div
+        $('#content').html(htmldata);
+        
+
+        </script>
+
+        <div>
+            <h1></h1>
+            <h2></h2>
+            <img src="" alt="This is an image">
+        </div>
+    </body>
+</html>

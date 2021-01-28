@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Image Gallery
+        </title>
+        <script src=" http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <style>
+            .image-thumbnail{
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            .image-thumbnail img{
+                width: 100%;
+                max-width: 100px;
+                padding: 10px;
+                border: 1px solid black;
+                box-shadow: 2px 2px 2px red;
+                
+            }
+            .large-image{
+                display: flex;
+                justify-content: center;
+                margin-top:20px;
+            }
+
+            .large-image img{
+                border: 1px solid black;
+                box-shadow: 2px 2px 2px red;
+                position: relative;
+                padding: 10px;
+                width: 100%;
+                max-width: 1000px;
+            }
+
+            .large-image .next{
+                bottom:10px;
+                right: 315px;
+                font-size: 50px;
+                position: absolute;
+            }
+
+            .large-image .prev{
+                bottom:10px;
+                left: 336px;
+                font-size: 50px;
+                position: absolute;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="image-thumbnail">
+            <img src="img_1.jpg" id="img1" class="small-img">
+            <img src="img_2.jpg" id="img2" class="small-img">
+            <img src="img_3.jpg" id="img3" class="small-img">
+            <img src="img_4.jpg" id="img4" class="small-img">
+        </div>
+        <div class="large-image">
+            <div class="next">Next</div>
+            <img src="img_1.jpg" id="image-large">
+            <div class="prev">Prev</div>
+        </div>
+       
+    </body>
+
+    <script>
+
+        var paused = false;
+
+
+        $(".small-img").click(function(){
+            $("#image-large").attr("src",
+            $(this).attr("src"));
+        });
+
+        var counter = 1;
+
+        $("#img"+counter).click();
+
+        $(".prev").click(function(){
+            counter = counter - 1;
+
+            if(counter < 1){
+                counter = 4;
+            }
+
+            $("#img"+counter).click();
+        });
+
+        $(".next").click(function(){
+            counter = counter + 1;
+
+            if (counter > 4){
+                counter = 1;
+            }
+            $("#img"+counter).click();
+        });
+
+        $("#image-large").click(function(){
+            paused = !paused;
+        });
+
+        setInterval(function(){
+            if(!paused){
+                $(".next").click();
+            };
+        },2500);
+    </script>
+</html>

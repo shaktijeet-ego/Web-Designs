@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px auto;
+}
+
+.podcast-header{
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+    text-align: center;
+    font-size: 0.7rem;
+    position:fixed;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10vh;
+    background-color: black;
+    position: relative;
+    position: fixed;
+    width: 100%;
+    margin-top: 50px;
+    
+}
+
+
+
+#header-container .logo-header{
+    width: 8%;
+}
+
+#header-container .logo-header img{
+    position: absolute;
+    top: 0.4em;
+    left: 0.8em;
+    
+}
+
+#header-container .garyname-header{
+    width: 20%;
+    color: white;
+   
+}
+
+#header-container .nav-header{
+    width: 60%;
+    overflow: none;
+}
+
+#header-container .search-header{
+    color: white;
+    width: 5%;
+    font-size: 2rem;
+}
+
+/*Styles for Nav*/
+
+.nav-header ul{
+   
+}
+
+.nav-header li{
+   list-style-type: none;
+   float: left;
+   padding-bottom: 15px;
+   padding-left: 50px;
+   
+}
+
+.nav-header li a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.80rem;
+    text-decoration: none;
+    
+    
+}
+
+/*START of main content*/
+#main-content-1{
+    display: flex;
+    flex-direction: column;
+    
+    background-color: black;
+    
+    
+}
+
+.content-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.content-text h1{
+    text-transform: uppercase;
+    font-family:  "Knockout 70 A", "Knockout 70 B", "Knockout 50 A", "Knockout 50 B", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    text-align: center;
+}
+
+.content-text h2{
+    text-align: center;
+}
+
+.content-text button{
+    background-color: red;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    width: 10%;
+    margin-bottom: 10px;
+}
+/*@media (min-width:900px){
+    #header-container .garyname-header{
+        width: 25%;
+        color: red;
+        margin-left: 8em;
+        font-size: 0.5rem;
+    }
+}*/
+
+/*Content following main content*/
+
+#main-content-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-content-2 .para-content{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+#main-content-2 .para-content h1{
+    width: 100%;
+    text-align: justify;
+    
+}
+
+#main-content-2 .para-content p{
+    text-align: justify;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px;
+    line-height: 150%;
+}
+
+#main-content-2 .video-content{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    
+    
+
+}
+
+#main-content-2 .video-content h1{
+    align-self: flex-end;
+    margin-right: 8%;
+}
+
+
+
+
+/* #main-content-2 p, #main-content-2 h1{
+    display: inline;
+} */

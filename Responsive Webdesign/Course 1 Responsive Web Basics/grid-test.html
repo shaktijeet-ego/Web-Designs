@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            This is a grid page
+        </title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <script src=" http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="col-md-6"> <h1 onclick="alert('hey')">Test</h1></div>
+        
+            <div class="col-md-6"> <h1 onclick="console.log('How')">Test2</h1>
+            </div>
+        </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 id="titlee" onclick="$('#titlee').html('Goodbye')">Hello</h1>
+                </div>
+                <div class="col-md-6">
+                    <h1 id="title" onclick='changeElement()'>Goodbye</h1>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 id="changeheading" onclick="changeHeading()">This needs to change</h1>
+                </div>
+            </div>
+    </body>
+
+    <script type="text/javascript">
+        function changeElement(){
+        $("#title").html("Hello")
+    };
+
+    function changeHeading(){
+        $("#changeheading").html("Changed");
+        $("#changeheading").click(function(){
+            $("#changeheading").html("This needs to change");
+            $("#changeheading").off("click");
+        });
+
+    };
+    </script>
+</html>

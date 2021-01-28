@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+    <script src=" http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+
+<body>
+
+    <h1 id="number" onclick="count()">
+        <h2 id="second"></h2>
+        <h2 id="third"></h2>
+
+    </h1>
+
+</body>
+
+
+<script type="text/javascript">
+
+var counter = 0
+$("#number").html(counter);
+
+function count(){
+    counter = counter + 1
+    $("#number").html(counter);
+
+    if (counter>5){
+        $("#second").html("stop");
+    }
+    if (counter>10){
+        $("#second").html("Keep Clicking");
+    }
+    if (counter>25){
+        $("#third").html("You are awesome");
+    }
+}
+</script>
+</html>

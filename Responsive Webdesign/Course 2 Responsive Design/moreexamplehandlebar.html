@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>
+            Handlebar Example
+        </title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/handlebars-v3.0.3.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li id="img1btn">
+                    <a href="#">Image 1</a>
+                </li>
+                <li id="img2btn">
+                    <a href="#">Image 2</a>
+                </li>
+                </ul>
+
+                <!--The content of the webpage to display-->
+
+                <div id="content" class="container-fluid">
+
+                </div>
+
+                <!--The template-->
+
+                <script id="detail-template" type="text/x-handlebars-template">
+                <div class="row-fluid">
+                    <div class="col-sm-5">
+                        <img src="{{src}}">
+                    </div>
+                    <div class="col-sm-7">
+                        <h1>{{title}}</h1>
+                        <h2>{{author}}</h2>
+                    </div>
+                </div>
+                </script>
+
+
+                <!--javascript code to fill the template-->
+
+                <script type="text/javascript">
+                
+                //creating two objects representing different images
+                    var data1 = {
+                        src: "images/img_1.jpg",
+                        title:"Title 1",
+                        author:"I am the author"
+
+                    };
+
+                    var data2 = {
+                        src: "images/img_2.jpg",
+                        title:"Title 2",
+                        author:"I am the author 2"
+
+                    };
+
+                    //get the template and compile it
+
+                    var source = $("#detail-template").html();
+                    var detail_template = Handlebars.compile(source);
+
+                    //instantiate the template with data whenever clicked
+
+                    $("#img1btn").click(function(){
+                        var html = detail_template(data1);
+                        $("#content").html(html);
+                    });
+
+                    $("#img2btn").click(function(){
+                        var html = detail_template(data2);
+                        $("#content").html(html);
+                    });
+                
+                </script>
+                
+
+            </div>
+        </div>
+    </body>
+</html>
